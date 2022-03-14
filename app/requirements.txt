@@ -1,0 +1,4 @@
+Django==4.0.3
+strawberry-graphql==0.102.2
+strawberry-graphql-django==0.2.5
+typing-extensions==4.1.1

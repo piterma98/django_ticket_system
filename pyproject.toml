@@ -1,0 +1,35 @@
+[tool.black]
+skip-string-normalization = false
+extend-exclude =  '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.venv
+  | \venv
+  | \env
+  | migrations
+)/
+'''
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = "app/"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+gnore_missing_imports = true
+disallow_any_generics = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+no_strict_optional = true
+no_warn_no_return = true
+warn_unreachable = true
+allow_untyped_globals = true
+allow_redefinition = true
+show_error_context = true
+show_error_codes = true
+show_column_numbers = true
+
+[tool.django-stubs]
+django_settings_module = "config.settings"
+ignore_missing_imports = true
